@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    anchor-name: --carousel;
+    scroll-marker-group: after;
+    border-radius: 10px;
+
+    &::scroll-marker-group {
+        position: absolute;
+        position-anchor: --carousel;
+        top: calc(anchor(top));
+        left: calc(anchor(left) - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 400px;
+        gap: 15px;
+
+        overflow: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+    }
+
+    > li {
+        flex-shrink: 0;
+        width: 400px;
+        scroll-snap-align: center;
+
+        img {
+            width: 400px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &::scroll-marker {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 1px solid purple;
+            border-radius: 10px;
+            outline-offset: 4px;
+            scroll-snap-align: center;
+            background-size: cover;
+        }
+
+        &::scroll-marker:hover {
+            filter: brightness(0.95);
+        }
+
+        &:nth-child(1)::scroll-marker {
+            background-image: url("https://rukminim1.flixcart.com/image/1904/1904/xif0q/dress/i/3/3/-original-imagt67dgbznr7yr.jpeg?q=90&crop=false");
+        }
+        &:nth-child(2)::scroll-marker {
+            background-image: url("https://rukminim2.flixcart.com/image/832/832/xif0q/dress/z/u/b/-original-imagt67dxgghnejf.jpeg?q=70&crop=false");
+        }
+        &:nth-child(3)::scroll-marker {
+            background-image: url("https://rukminim2.flixcart.com/image/832/832/xif0q/dress/d/9/h/-original-imagt67dgakgckhf.jpeg?q=70&crop=false");
+        }
+        &:nth-child(4)::scroll-marker {
+            background-image: url("https://rukminim2.flixcart.com/image/832/832/xif0q/dress/s/n/t/-original-imagt67d7fm2z9pz.jpeg?q=70&crop=false");
+        }
+        &:nth-child(5)::scroll-marker {
+            background-image: url("https://rukminim2.flixcart.com/image/832/832/xif0q/dress/o/h/z/-original-imagt67dvh9xpsqz.jpeg?q=70&crop=false");
+        }
+
+        &::scroll-marker:is(:hover, :focus-visible) {
+            border-color: purple;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
