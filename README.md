@@ -10,25 +10,26 @@ This project uses modern CSS features like:
 
 ---
 
-## 💡 Features
+### 💡 Features
 
-### 🔁 Smooth Snapping with `scroll-snap-type`
+#### 🔁 Smooth Snapping with `scroll-snap-type`
 Each slide "locks" into place horizontally as the user scrolls — creating a sleek, app-like experience with zero JS.
 
-### 🎯 Visual Navigation with `::scroll-marker-group`
+#### 🎯 Visual Navigation with `::scroll-marker-group`
 This experimental pseudo-element automatically creates a group of clickable markers linked to each carousel item.
 
-### 🖼️ Thumbnail Markers using `::scroll-marker`
+#### 🖼️ Thumbnail Markers using `::scroll-marker`
 Each slide defines its own mini-thumbnail using `background-image`. Clicking on any thumbnail scrolls directly to the respective slide — super intuitive and smooth.
 
 ---
 
-📸 Demo
-[css-only-carousel.mp4](https://shorturl.at/VUEk9)
+### 📸 Demo
+
+[](https://github-production-user-asset-6210df.s3.amazonaws.com/58190404/432664595-de4fca3e-a37f-4ade-b026-d54b038e5a4c.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250411%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250411T082017Z&X-Amz-Expires=300&X-Amz-Signature=e5185a8f1308ba251b4c0866566cd612493527d4af57d3865f8fb7f71cc431cb&X-Amz-SignedHeaders=host)
 
 ---
 
-🧪 Browser Compatibility
+### 🧪 Browser Compatibility
 
 | Feature	| Supported In |
 | --- | --- |
@@ -38,7 +39,7 @@ Each slide defines its own mini-thumbnail using `background-image`. Clicking on 
 
 ---
 
-🛠️ Built With
+### 🛠️ Built With
 
 * HTML5
 * CSS3 (with experimental scroll-linked marker support)
@@ -46,8 +47,10 @@ Each slide defines its own mini-thumbnail using `background-image`. Clicking on 
 
 ---
 
-📎 Credits
+### 📎 Credits
+
 Product images from Flipkart (used for demonstration purposes only)
 
-📄 License
+### 📄 License
+
 This project is open-source and available under the MIT License.
