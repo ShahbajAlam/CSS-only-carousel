@@ -38,6 +38,7 @@ body {
         align-items: start;
         width: 400px;
         gap: 15px;
+        padding: 10px;
 
         overflow: auto;
         overscroll-behavior-x: contain;
@@ -61,11 +62,10 @@ body {
             content: "";
             width: 75px;
             height: 75px;
-            border: 1px solid purple;
             border-radius: 10px;
-            outline-offset: 4px;
             scroll-snap-align: center;
             background-size: cover;
+            outline: none;
         }
 
         &::scroll-marker:hover {
@@ -88,8 +88,9 @@ body {
             background-image: url("https://rukminim2.flixcart.com/image/832/832/xif0q/dress/o/h/z/-original-imagt67dvh9xpsqz.jpeg?q=70&crop=false");
         }
 
-        &::scroll-marker:is(:hover, :focus-visible) {
-            border-color: purple;
+        &::scroll-marker:target-current {
+            transform: scale(1.08);
+            transition-duration: 200ms;
         }
     }
 }
